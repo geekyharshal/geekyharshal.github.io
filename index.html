@@ -3,160 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Harshal | Full Stack Developer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div>
-            <h1>Portfolio</h1>
+    <!-- Modern Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h3>Harshal</h3>
         </div>
-        <div>
+        <div class="nav-links">
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#contributions">Contributions</a>
             <a href="#contact">Contact</a>
-            <span>🌓</span>
+            <button class="theme-toggle">🌓</button>
         </div>
     </nav>
 
-    <header>
-        <div>
-            <h1>Hi, I'm Harshal</h1>
-            <p>Full Stack Developer | Open Source Enthusiast</p>
-            <div>
-                <button>View Projects</button>
-                <button>Contact Me</button>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="glitch-text">Hi, I'm Harshal</h1>
+            <p class="typewriter">Full Stack Developer | Open Source Enthusiast</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </div>
     </header>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div>
-            <div>
-                <h3>ATLAS Java</h3>
-                <p>Description of the project</p>
-                <div>
-                    <span>Java</span>
-                    <span>Spring</span>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project-image.jpg" alt="ATLAS Java">
+                    </div>
+                    <div class="project-content">
+                        <h3>ATLAS Java</h3>
+                        <p>Description of the project</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <a href="#">GitHub</a>
-                    <a href="#">Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2025 - Present</span>
+                        <h3>Technical Support Engineer</h3>
+                        <h4>Amazon Web Services (AWS)</h4>
+                        <p>AWS Support Team</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2023 - 2024</span>
+                        <h3>Seller Support Associate</h3>
+                        <h4>Amazon Seller Services</h4>
+                        <p>Seller Support Operations</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2022 - 2023</span>
+                        <h3>HR Operations Associate</h3>
+                        <h4>Amazon HR Operations</h4>
+                        <p>Employee Resource Center</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2020 - 2021</span>
+                        <h3>Support Associate</h3>
+                        <h4>Amazon Operations</h4>
+                        <p>Logistics Support</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        
-        <div class="experience-item">
-            <h3>Technical Support Engineer</h3>
-            <p>Amazon Web Services (AWS) | 2024 - Present</p>
-            <p>AWS Support Team</p>
-        </div>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-tag">Java (Core, OOP, Collections, Multithreading)</span></li>
+                        <li><span class="skill-tag">Linux & Shell Scripting</span></li>
+                    </ul>
+                </div>
 
-        <div class="experience-item">
-            <h3>Seller Support</h3>
-            <p>Amazon Seller Services | 2023 - 2024</p>
-            <p>Seller Support Operations</p>
-        </div>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Data Structures & Algorithms</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-tag">Arrays & Strings</span></li>
+                        <li><span class="skill-tag">Hash Tables</span></li>
+                        <li><span class="skill-tag">Linked Lists</span></li>
+                        <li><span class="skill-tag">Stacks & Queues</span></li>
+                        <li><span class="skill-tag">Sorting Algorithms</span></li>
+                        <li><span class="skill-tag">Recursion</span></li>
+                    </ul>
+                </div>
 
-        <div class="experience-item">
-            <h3>HR Operations Associate</h3>
-            <p>Amazon HR Operations | 2022 - 2023</p>
-            <p>Employee Resource Center</p>
-        </div>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Software Development</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-tag">SDLC & Agile Methodologies</span></li>
+                        <li><span class="skill-tag">Object-Oriented Design Patterns</span></li>
+                        <li><span class="skill-tag">Design Principles (SOLID)</span></li>
+                        <li><span class="skill-tag">Version Control (Git)</span></li>
+                    </ul>
+                </div>
 
-        <div class="experience-item">
-            <h3>Support Associate</h3>
-            <p>Amazon Operations | 2020 - 2021</p>
-            <p>Logistics Support</p>
-        </div>
-    </section>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Database & Cloud</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-tag">NoSQL (MongoDB, DynamoDB)</span></li>
+                        <li><span class="skill-tag">AWS Services</span></li>
+                        <li><span class="skill-tag">DevOps Fundamentals</span></li>
+                    </ul>
+                </div>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Java (Core, OOP, Collections, Multithreading)</li>
-                    <li>Linux & Shell Scripting</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Data Structures & Algorithms</h3>
-                <ul>
-                    <li>Arrays & Strings</li>
-                    <li>Hash Tables</li>
-                    <li>Linked Lists</li>
-                    <li>Stacks & Queues</li>
-                    <li>Sorting Algorithms</li>
-                    <li>Recursion</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Software Development</h3>
-                <ul>
-                    <li>SDLC & Agile Methodologies</li>
-                    <li>Object-Oriented Design Patterns</li>
-                    <li>Design Principles (SOLID)</li>
-                    <li>Version Control (Git)</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Database & Cloud</h3>
-                <ul>
-                    <li>NoSQL (MongoDB, DynamoDB)</li>
-                    <li>AWS Services</li>
-                    <li>DevOps Fundamentals</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Testing & Quality Assurance</h3>
-                <ul>
-                    <li>JUnit & TestNG</li>
-                    <li>Selenium</li>
-                    <li>API Testing</li>
-                    <li>Performance Testing</li>
-                    <li>Test Automation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="contributions">
-        <h2>Open Source Contributions</h2>
-        <div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div>
-            <div>
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Email</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Harshal. All rights reserved.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-</body>
-</html>
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-vial"></i>
+                        <h3>Testing & Quality Assurance</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-tag">JUnit & TestNG</span></li>
+                        <li><span class="skill-tag">Selenium</span></li>
+                        <li><span class="skill-tag">API Testing</span></li>
+                        <li><span class="skill-tag">Performance Testing</span></li>
