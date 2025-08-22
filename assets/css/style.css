@@ -1,98 +1,133 @@
-/* assets/css/style.css */
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* style.css */
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #0984e3;
+    --text-color: #2d3436;
+    --background-color: #f5f6fa;
+    --gradient: linear-gradient(135deg, #0984e3, #00cec9);
 }
 
+/* Modern Background */
 body {
+    background: var(--background-color);
     font-family: 'Inter', sans-serif;
+    color: var(--text-color);
     line-height: 1.6;
-    color: #333;
 }
 
-/* Navigation Styles */
-.nav-container {
-    position: fixed;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    z-index: 1000;
-}
-
-/* Hero Section */
-.hero-section {
+/* Hero Section Animation */
+.hero {
+    background: var(--gradient);
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 2rem;
-    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Project Cards */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,...'); /* Add geometric pattern */
+    opacity: 0.1;
+    animation: rotate 50s linear infinite;
 }
 
-.project-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+/* Text Animations */
+.glitch-text {
+    position: relative;
+    animation: glitch 1s linear infinite;
+    font-size: 4rem;
+    font-weight: 700;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--secondary-color);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end),
+               blink-caret .75s step-end infinite;
 }
 
-/* Skills Section */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Contact Section */
-.contact-section {
-    background: #f8f9fa;
-    padding: 4rem 2rem;
-    text-align: center;
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero-content {
-        text-align: center;
-    }
+/* Timeline Animation */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Skill Tags Animation */
+.skill-tag {
+    position: relative;
+    overflow: hidden;
+    background: var(--gradient);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+/* Button Hover Effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-.fade-in {
-    animation: fadeIn 0.5s ease forwards;
+@keyframes glitch {
+    2%, 64% { transform: translate(2px,0) skew(0deg); }
+    4%, 60% { transform: translate(-2px,0) skew(0deg); }
+    62% { transform: translate(0,0) skew(5deg); }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--secondary-color); }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --primary-color: #f5f6fa;
+    --text-color: #f5f6fa;
+    --background-color: #2d3436;
 }
