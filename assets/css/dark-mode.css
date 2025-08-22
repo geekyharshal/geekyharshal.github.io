@@ -1,0 +1,31 @@
+/* assets/css/dark-mode.css */
+
+[data-theme="dark"] {
+    /* Base colors */
+    --bg-primary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    
+    /* Component colors */
+    --card-bg: #2d2d2d;
+    --nav-bg: rgba(45, 45, 45, 0.95);
+    --hero-gradient: linear-gradient(to right, #1a1a1a, #2d2d2d);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-container {
+    background: var(--nav-bg);
+}
+
+[data-theme="dark"] .project-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hero-section {
+    background: var(--hero-gradient);
+}
