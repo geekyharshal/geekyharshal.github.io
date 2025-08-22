@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <!-- Add modern font (e.g., Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">
+            <a href="/">Portfolio</a>
+        </div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contributions">Contributions</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
 
-<h1>Welcome to the world of geekyharshal</h1>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm [Your Name]</h1>
+            <p class="hero-subtitle">Full Stack Developer | Open Source Enthusiast</p>
+            <div class="hero-cta">
+                <a href="#projects" class="primary-btn">View Projects</a>
+                <a href="#contact" class="secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>ATLAS Java</h3>
+                <p>Description of the project</p>
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring</span>
+                </div>
+                <div class="project-links">
+                    <a href="github-link" target="_blank">GitHub</a>
+                    <a href="demo-link" target="_blank">Live Demo</a>
+                </div>
+            </article>
+            <!-- Add more project cards -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <ul class="skill-list">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <!-- Add more skill categories -->
+        </div>
+    </section>
+
+    <!-- Open Source Contributions -->
+    <section id="contributions" class="contributions-section">
+        <h2>Open Source Contributions</h2>
+        <div class="github-activity">
+            <!-- GitHub activity feed will be populated via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="social-links">
+                <a href="github-profile" target="_blank">GitHub</a>
+                <a href="linkedin-profile" target="_blank">LinkedIn</a>
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>
