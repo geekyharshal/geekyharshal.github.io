@@ -1,133 +1,102 @@
-/* style.css */
 :root {
-    --primary-color: #2d3436;
-    --secondary-color: #0984e3;
-    --text-color: #2d3436;
-    --background-color: #f5f6fa;
-    --gradient: linear-gradient(135deg, #0984e3, #00cec9);
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --background: #ffffff;
+  --text-color: #1f2937;
+  --card-bg: #f3f4f6;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Modern Background */
+/* Modern Clean Layout */
 body {
-    background: var(--background-color);
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-    line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background);
 }
 
-/* Hero Section Animation */
-.hero {
-    background: var(--gradient);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+/* Sleek Navigation */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  width: 100%;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: url('data:image/svg+xml,...'); /* Add geometric pattern */
-    opacity: 0.1;
-    animation: rotate 50s linear infinite;
+/* Modern Cards */
+.project-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow);
 }
 
-/* Text Animations */
-.glitch-text {
-    position: relative;
-    animation: glitch 1s linear infinite;
-    font-size: 4rem;
-    font-weight: 700;
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
-.typewriter {
-    overflow: hidden;
-    border-right: .15em solid var(--secondary-color);
-    white-space: nowrap;
-    animation: typing 3.5s steps(40, end),
-               blink-caret .75s step-end infinite;
-}
-
-/* Scroll Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Timeline Animation */
-.timeline-item {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.6s ease;
-}
-
-.timeline-item.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Skill Tags Animation */
-.skill-tag {
-    position: relative;
-    overflow: hidden;
-    background: var(--gradient);
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-}
-
-/* Button Hover Effects */
+/* Animated Buttons */
 .btn {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
 }
 
-/* Animations */
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.btn-primary:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
 }
 
-@keyframes glitch {
-    2%, 64% { transform: translate(2px,0) skew(0deg); }
-    4%, 60% { transform: translate(-2px,0) skew(0deg); }
-    62% { transform: translate(0,0) skew(5deg); }
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--secondary-color); }
+.timeline-item {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
 }
 
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .hero-content {
+    padding: 2rem;
+  }
 }
 
-/* Dark Mode Styles */
-[data-theme="dark"] {
-    --primary-color: #f5f6fa;
-    --text-color: #f5f6fa;
-    --background-color: #2d3436;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title, .project-card, .skill-category {
+  animation: fadeIn 0.6s ease forwards;
 }
