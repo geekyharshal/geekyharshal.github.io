@@ -1,180 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshal | Full Stack Developer</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harshal's Professional Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="dark-mode.css" />
 </head>
-
 <body>
-    <!-- Modern Navbar -->
-    <nav class="navbar">
-        <div class="nav-brand">
-            <h3>Harshal</h3>
-        </div>
-        <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contributions">Contributions</a>
-            <a href="#contact">Contact</a>
-            <button class="theme-toggle">🌓</button>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="logo">Harshal</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌗</button></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="glitch-text">Hi, I'm Harshal</h1>
-            <p class="typewriter">Full Stack Developer | Open Source Enthusiast</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
-        </div>
-    </header>
+  <header class="hero-section fade-in">
+    <div class="hero-content">
+      <h1>Hello, I'm Harshal</h1>
+      <p>Computer Science Engineer | Tech Support Specialist | Cloud & AI Enthusiast</p>
+      <a class="btn btn-primary" href="#contact">Get In Touch</a>
+    </div>
+  </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project-image.jpg" alt="ATLAS Java">
-                    </div>
-                    <div class="project-content">
-                        <h3>ATLAS Java</h3>
-                        <p>Description of the project</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="about" class="fade-in">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Passionate about cloud, AI, and developing impactful technology solutions.
+      I leverage my experience in customer service and technical expertise to solve real-world problems.
+      I enjoy hackathons, coding competitions, and building projects that matter.
+    </p>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2025 - Present</span>
-                        <h3>Technical Support Engineer</h3>
-                        <h4>Amazon Web Services (AWS)</h4>
-                        <p>AWS Support Team</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2023 - 2024</span>
-                        <h3>Seller Support Associate</h3>
-                        <h4>Amazon Seller Services</h4>
-                        <p>Seller Support Operations</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2021 - 2023</span>
-                        <h3>HR Operations Associate</h3>
-                        <h4>Amazon HR Operations</h4>
-                        <p>Employee Resource Center</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2020 - 2021</span>
-                        <h3>Support Associate</h3>
-                        <h4>Amazon Operations</h4>
-                        <p>Logistics Support</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="skills" class="skills-grid fade-in">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill-category">Java</div>
+    <div class="skill-category">TestNG</div>
+    <div class="skill-category">AWS</div>
+    <div class="skill-category">HTML5</div>
+    <div class="skill-category">CSS3</div>
+    <div class="skill-category">JavaScript</div>
+    <div class="skill-category">Cloud Computing</div>
+    <div class="skill-category">Mobile App Development</div>
+    <div class="skill-category">AI/ML</div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming Languages</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-tag">Java (Core, OOP, Collections, Multithreading)</span></li>
-                        <li><span class="skill-tag">Advanced Java (Spring, Hibernate, JPA)</span></li>
-                        <li><span class="skill-tag">Python</span></li>
-                        <li><span class="skill-tag">C/C++</span></li>
-                        <li><span class="skill-tag">Linux & Shell Scripting</span></li>
-                    </ul>
-                </div>
+  <section id="projects" class="fade-in">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-card">
+      <h3>Personal Portfolio Website</h3>
+      <p>Responsive, dark/light portfolio built with HTML, CSS, JavaScript, hosted using GitHub Pages.</p>
+      <a href="https://geekyharshal.github.io" target="_blank" rel="noopener">View Live</a>
+    </div>
+    <!-- Add more project-card blocks as needed for your other projects -->
+  </section>
 
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Data Structures & Algorithms</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-tag">Arrays & Strings</span></li>
-                        <li><span class="skill-tag">Hash Tables</span></li>
-                        <li><span class="skill-tag">Linked Lists</span></li>
-                        <li><span class="skill-tag">Stacks & Queues</span></li>
-                        <li><span class="skill-tag">Sorting Algorithms</span></li>
-                        <li><span class="skill-tag">Recursion</span></li>
-                    </ul>
-                </div>
+  <section id="experience" class="timeline fade-in">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline-item">
+      <strong>AWS Support Team</strong><br>
+      Seller Support Operations<br>
+      Employee Resource Center<br>
+      Logistics Support
+    </div>
+    <!-- Add more timeline-item sections for other roles or experiences -->
+  </section>
 
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Software Development</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-tag">SDLC & Agile Methodologies</span></li>
-                        <li><span class="skill-tag">Object-Oriented Design Patterns</span></li>
-                        <li><span class="skill-tag">Design Principles (SOLID)</span></li>
-                        <li><span class="skill-tag">Version Control (Git)</span></li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Database & Cloud</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-tag">NoSQL (MongoDB, DynamoDB)</span></li>
-                        <li><span class="skill-tag">AWS Services (EC2, S3, Lambda)</span></li>
-                        <li><span class="skill-tag">AWS Cloud Architecture</span></li>
-                        <li><span class="skill-tag">Cloud Security & Compliance</span></li>
-                        <li><span class="skill-tag">DevOps Fundamentals</span></li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-vial"></i>
-                        <h3>Testing & Quality Assurance</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><span class="skill-tag">JUnit & TestNG</span></li>
-                        <li><span class="skill-tag">Selenium</span></li>
-                        <li><span class="skill-tag">API Testing</span></li>
-                        <li><span class="skill-tag">Performance Testing</span></li>
-                    </ul>
-                </div>
+  <section id="contact" class="fade-in">
+    <h2 class="section-title">Contact</h2>
+    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" rows="5" required></textarea>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </section>
+  
+  <script src="main.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>

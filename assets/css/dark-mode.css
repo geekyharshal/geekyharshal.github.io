@@ -1,31 +1,29 @@
 /* assets/css/dark-mode.css */
-
-[data-theme="dark"] {
-    /* Base colors */
-    --bg-primary: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    
-    /* Component colors */
-    --card-bg: #2d2d2d;
-    --nav-bg: rgba(45, 45, 45, 0.95);
-    --hero-gradient: linear-gradient(to right, #1a1a1a, #2d2d2d);
-}
-
 [data-theme="dark"] body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
-
 [data-theme="dark"] .nav-container {
-    background: var(--nav-bg);
+  background: rgba(45, 45, 45, 0.95);
 }
-
-[data-theme="dark"] .project-card {
-    background: var(--card-bg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .timeline-item,
+[data-theme="dark"] .skill-category {
+  background: #2d2d2d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-
 [data-theme="dark"] .hero-section {
-    background: var(--hero-gradient);
+  background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+}
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background-color: #222;
+  color: #fff;
+  border-color: #444;
+}
+[data-theme="dark"] .nav-links a {
+  color: #fff;
+}
+[data-theme="dark"] .btn-primary {
+  background: #2563eb;
 }
